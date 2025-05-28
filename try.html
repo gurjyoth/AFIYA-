@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFIYA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="h-screen flex flex-col justify-between">
+    <!-- Username Modal -->
+    <div id="username-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white p-6 rounded-lg shadow-xl max-w-md w-full mx-4">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-800">Welcome to AFIYA</h2>
+            <p class="text-gray-600 mb-4 text-center">Please enter your username to continue</p>
+            <input type="text" id="username-input" class="w-full p-2 border border-gray-300 rounded mb-4 focus:outline-none focus:border-pink-500" placeholder="Enter your username">
+            <button id="username-submit" class="w-full bg-pink-500 text-white py-2 rounded hover:bg-pink-600 transition-colors">Continue</button>
+        </div>
+    </div>
+
+    <!-- Side Menu -->
+    <div id="side-menu" class="bg-rgba(255, 255, 255, 0.363)">
+        <div class="menu-header">
+            <h2 class="text-xl font-bold">Chat History</h2>
+            <i class="fas fa-times close-btn text-gray-600"></i>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search history...">
+        </div>
+        <div class="history-list">
+            <!-- Chat history will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Fixed Header Section -->
+    <div class="fixed-header flex justify-between items-center p-4">
+        <i id="menu-icon" class="fas fa-bars text-black text-2xl cursor-pointer"></i>
+        <div class="relative">
+            <button id="dropdown-button" class="text-black text-xl flex items-center space-x-2">
+                <span id="dropdown-text">AFIYA</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="dropdown-menu" class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 bg-white shadow-lg rounded-lg hidden">
+                <li class="py-2 px-4 cursor-pointer hover:bg-gray-200" data-value="AFIYA">AFIYA</li>
+                <li class="py-2 px-4 cursor-pointer hover:bg-gray-200" data-value="Module 1">Module 1</li>
+                <li class="py-2 px-4 cursor-pointer hover:bg-gray-200" data-value="Module 2">Module 2</li>
+                <li class="py-2 px-4 cursor-pointer hover:bg-gray-200" data-value="Module 3">Module 3</li>
+            </ul>
+        </div>
+        <div class="flex space-x-4 relative">
+            <div class="relative">
+                <i id="mic-icon" class="fas fa-microphone text-black text-2xl cursor-pointer"></i>
+                <div id="mic-status" class="absolute top-full mt-2 text-black text-sm hidden whitespace-nowrap"></div>
+            </div>
+            <i id="profile-icon" class="fas fa-user text-black text-2xl cursor-pointer"></i>
+            <div id="profile-menu" class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg hidden">
+                <div class="p-4">
+                    <p class="text-black">Username: John Doe</p>
+                    <p class="text-black">Email: john.doe@example.com</p>
+                    <button class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Chat Area -->
+    <div class="flex-grow flex flex-col w-full px-4">
+        <div id="chat-container">
+            <!-- Chat messages will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Fixed Footer Section -->
+    <div class="fixed-footer flex items-center space-x-5 bgrgba(255, 255, 255, 0.2); rounded-full shadow-md px-5 py-5">
+        <label for="file-upload" class="cursor-pointer">
+            <i class="fas fa-upload text-black text-sm"></i>
+        </label>
+        <input id="file-upload" type="file" class="hidden">
+        <input id="ask-input" type="text" 
+               placeholder="Ask anything (Max 200 chars)" 
+               maxlength="200" 
+               class="outline-none bg-transparent text-black text-sm py-1 px-3 flex-grow w-32">
+        <button id="send-button" class="cursor-pointer">
+            <i class="fas fa-paper-plane text-black text-sm"></i>
+        </button>
+        <i class="fas fa-cog text-black text-2xl cursor-pointer"></i>
+        <i id="question-icon" class="fas fa-question-circle text-black text-2xl cursor-pointer"></i>
+        <div id="question-menu" class="absolute right-0 bottom-12 w-48 bg-white shadow-lg rounded-lg hidden">
+            <ul class="p-4">
+                <li class="py-2 cursor-pointer hover:bg-gray-200">Help & FAQ</li>
+                <li class="py-2 cursor-pointer hover:bg-gray-200">Release notes</li>
+                <li class="py-2 cursor-pointer hover:bg-gray-200">Terms & policies</li>
+                <li class="py-2 cursor-pointer hover:bg-gray-200">Keyboard shortcuts</li>
+            </ul>
+        </div>
+    </div>
+    <div id="chat-box"></div>
+    <script src="script.js"></script>
+</body>
+</html>
