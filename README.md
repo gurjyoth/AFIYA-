@@ -26,6 +26,7 @@ Afiya is an AI-powered support system designed to offer both **emotional comfort
 * Node.js (v18+)
 * MongoDB running locally or remotely
 * Hugging Face API key
+* Open Router API Key
 
 ### Setup Instructions
 
