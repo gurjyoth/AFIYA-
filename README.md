@@ -5,7 +5,7 @@ Afiya is an AI-powered support system designed to offer both **emotional comfort
 ## Features
 
 * 💬 **Emotionally supportive conversations** powered by OpenChat (optimized for human-like empathy).
-* 💻 **Technical assistance** including code generation, debugging, and learning help, using LLaMA 34B.
+* 💻 **Technical assistance** including code generation, debugging, and learning help, using LLaMA 70B.
 * 💾 **Chat history storage** via MongoDB, allowing users to revisit past conversations.
 * 🔁 **Session continuity** that maintains conversational context.
 * 🧠 **Model switching logic** to dynamically change AI models based on the message type (technical or emotional).
