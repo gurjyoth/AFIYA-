@@ -47,6 +47,7 @@ npm install
 ```env
 HF_API_KEY=your_huggingface_api_key
 MONGODB_URI=your_mongodb_uri
+OPENROUTER_API_KEY=your_openrouter_api_key
 ```
 
 4. Start the server:
@@ -58,7 +59,7 @@ node server.js
 5. Open your browser:
 
 ```
-http://localhost:3000
+http://localhost:3001
 ```
 
 ## Current Limitations
